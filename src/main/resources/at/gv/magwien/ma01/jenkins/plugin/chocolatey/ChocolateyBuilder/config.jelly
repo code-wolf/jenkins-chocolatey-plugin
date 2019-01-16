@@ -1,0 +1,59 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:section title="Meta Data">
+        <f:entry title="${%PackageId}" field="packageId">
+            <f:textbox />
+        </f:entry>
+        <f:entry title="${%Version}" field="version" description="${%VersionDescription}" help="${%VersionHelp}">
+            <f:textbox value="0.0.0.0" />
+        </f:entry>
+        <f:entry title="${%Title}" field="title">
+            <f:textbox />
+        </f:entry>
+        <f:entry title="${%Summary}" field="summary">
+            <f:textarea />
+        </f:entry>
+        <f:entry title="${%Description}" field="description">
+            <f:textarea />
+        </f:entry>
+
+    </f:section>
+    <f:section title="${%Dependencies}">
+        <f:repeatable var="dependency" items="dependencies" noAddButton="false" name="dependencies" >
+            <fieldset>
+                <f:entry title="${%Dependency}" field="this">
+                    <f:textbox />
+                </f:entry>
+            </fieldset>
+        </f:repeatable>
+    </f:section>
+    <f:section title="Product">
+        <f:entry title="${%MsiPath}" field="msiPath">
+            <f:textbox />
+        </f:entry>
+    </f:section>
+
+    <f:advanced>
+        <f:entry title="${%Authors}" field="authors">
+            <f:textbox />
+        </f:entry>
+        <f:entry title="${%ProjectUrl}" field="projectUrl">
+            <f:textbox />
+        </f:entry>
+        <f:entry title="${%Tags}" field="tags">
+            <f:textbox />
+        </f:entry>
+        <f:entry title="${%ReleaseNotes}" field="releaseNotes" description="${ReleaseNotesDescription}">
+            <f:textarea />
+        </f:entry>
+        <f:entry title="${%Provides}" field="provides">
+            <f:textbox />
+        </f:entry>
+        <f:entry title="${%Conflicts}" field="conflicts">
+            <f:textbox />
+        </f:entry>
+        <f:entry title="${%Replaces}" field="replaces">
+            <f:textbox />
+        </f:entry>
+    </f:advanced>
+</j:jelly>

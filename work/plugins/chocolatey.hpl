@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Group-Id: io.jenkins.plugins
+Short-Name: chocolatey
+Long-Name: Chocolatey Plugin
+Plugin-Version: 1.0-SNAPSHOT (private-01/16/2019 21:26-alex)
+Hudson-Version: 2.7.3
+Jenkins-Version: 2.7.3
+Plugin-Dependencies: structs:1.7
+Plugin-Developers: 
+Libraries: /Users/alex/Documents/Projects/MA01/jenkins/chocolatey-plug
+ in/src/main/resources,/Users/alex/Documents/Projects/MA01/jenkins/cho
+ colatey-plugin/target/classes
+Resource-Path: /Users/alex/Documents/Projects/MA01/jenkins/chocolatey-
+ plugin/src/main/webapp
+
